@@ -3,8 +3,6 @@
 // format. The amount of time can range from less than a second to several hours and should be easy
 // for a human to read (for example “00:00:00:00012” is not a good output).
 
-
-
 // At first sight, there are two ways of solving this: 1) Using perfomance.now() and 2) Using Date()
 async function timeMeter(functionToRun) {
     let timeShow = null
@@ -20,7 +18,8 @@ async function timeMeter(functionToRun) {
     let finishTime = performance.now()
     // let finishTime = new Date().getTime()    // <-- 2nd way to solve using Date()
     let timeDiff = ((finishTime - initTime)/1000) // This is the original amount of time taken by the function to run. In milliseconds.
-    console.log(timeDiff)
+
+
     // From now on... I just use the original timeDiff to separate from seconds, minutes, hours and days.
     const MILLISECONDS = timeDiff.toFixed(3)
     const SECONDS = Math.floor(timeDiff)
@@ -35,8 +34,6 @@ async function timeMeter(functionToRun) {
     // This function is just to console.log another format.
     function betterFormat() {
         if (MILLISECONDS < 0.1) {
-            console.log("hola")
-            console.log(MILLISECONDS)
             timeShow.innerHTML = (`${DAYS}d:${HOURS}h:${MINUTES}m:${MILLISECONDS}s`)
         }
         else {
@@ -66,7 +63,7 @@ async function timeMeter(functionToRun) {
         console.log(`Time elased: ${MILLISECONDS} seconds`)
         betterFormat()
     }
-    return 'That was blazzing fast! It took 0 seconds!!!'
+    else return
 }
 // Inside this goes the function that is going to be measured.
 // Observation: Just change the value of n. n = 50000 in my laptop runs in 11 seconds, but a value of n = 200000 can take up to 3 minutes (2 mins 47 seconds to be precise).
