@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Code Challenge Project Not Waste #1</title>
+</head>
+<body>
+    <h1>Code Challenge Project Not Waste</h1>
+    <h2>Problem #1: <br/>
+        Provide some Python code that can be used to measure how long a function takes to run in a friendly
+        format. The amount of time can range from less than a second to several hours and should be easy
+        for a human to read (for example “00:00:00:00012” is not a good output).</h2>
+        <h2 style="color:red;">This is my solution using plain Javascript and HTML. Yep! my first attempt was doing it with JS, after that, I went with python.</h2>
+        <label >Observation: Just change the value of the input. A value of 50000 in my laptop runs in 11 seconds, but a value of 200000 can take up to 3 minutes (2 mins 47 seconds to be precise).</label><br>
+        <input type="number" name="a" id="a" placeholder="Write a number">
+    <button onclick="timeMeter(functionToMeasure)">Click to run the function</button> <br>
+    <p id="timeShow"></p>
+    <p id="timeShow2"></p>
+
+    <h4>I show the elapsed time in two different formats. The code comments are inside de JS file</h4>
+    <h4>Checkout the browser console.</h4>
+
+
+    <script src="main.js"></script>
+</body>
+</html>
